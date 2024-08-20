@@ -1,65 +1,59 @@
-/*CSS Reset*/
-*{
-    margin: 0px;
-    padding: 0px;
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-/*CSS Variables*/
-:root{
+/* CSS Variables */
+:root {
     --navbar-height: 59px;
 }
 
-/*Navigation Bar*/
-#navbar{
+/* Navigation Bar */
+#navbar {
     display: flex;
     align-items: center;
     position: sticky;
-    top: 0px;
-    /*justify-content: center;*/
+    top: 0;
+    flex-direction: row; /* Ensure horizontal layout */
 }
 
-#navbar::before{
+#navbar::before {
     content: "";
     background-color: black;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     z-index: -1;
     opacity: 0.4;
 }
 
-/*Navigation Bar : Logo and Image*/
-
-#logo{
+#logo {
     margin: 3px 8px;
-
 }
 
-#logo img{
-    height:54px;
-   margin: 2px 5px; 
-   border-radius: 20px;
+#logo img {
+    height: 54px;
+    margin: 2px 5px;
+    border-radius: 20px;
 }
 
-/*Navigation Bar : List Styling*/
-
-#navbar ul{
+#navbar ul {
     display: flex;
 }
 
-
-#navbar ul li{
+#navbar ul li {
     list-style: none;
     font-size: 1.3rem;
 }
 
-#navbar ul li a{
+#navbar ul li a {
     display: block;
     padding: 20px 12px;
     border-radius: 10px;
@@ -67,57 +61,57 @@ html{
     color: ivory;
 }
 
-#navbar ul li a:hover{
+#navbar ul li a:hover {
     color: black;
     background-color: rgb(182, 171, 171);
-    /*border-radius: 12px 12px;*/
     border: 1px solid black;
-
 }
 
-/*Home Section*/
-#home{
+/* Home Section */
+#home {
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
     justify-content: center;
     height: 568px;
     align-items: center;
+    position: relative;
 }
 
-#home::before{
+#home::before {
     content: "";
     background: url('https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-in-a-row-picture-id1208790364?k=20&m=1208790364&s=612x612&w=0&h=EMmRWT5P5qbUvy95RxDtUSWrttlIsuXqjzRFhnTxqMQ=') no-repeat center center/cover;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 642px;
     width: 100%;
     z-index: -1;
     opacity: 0.79;
 }
 
-#home h1{
+#home h1 {
     color: white;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#home p{
+#home p {
     color: white;
     text-align: center;
     font-size: 1.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/*Services Section*/
-#services{
+/* Services Section */
+#services {
     margin: 22px;
     display: flex;
     color: white;
+    flex-wrap: wrap; /* Adjust for better responsiveness */
 }
 
-#services .box{
+#services .box {
     border: 3px solid rgba(8, 6, 6, 0.829);
     padding: 34px;
     margin: 2px 40px;
@@ -125,19 +119,19 @@ html{
     background-color: rgb(190, 176, 158);
     margin-bottom: 20px;
 }
-#services .box img{
+
+#services .box img {
     height: 160px;
     margin: auto;
     display: block;
-
-}
-/*Clients Section*/
-#client-section{
-    position: relative; 
-    
 }
 
-#client-section::before{
+/* Clients Section */
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
     content: "";
     position: absolute;
     background: url('https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032__340.jpg') no-repeat center center/cover;
@@ -147,27 +141,28 @@ html{
     opacity: 0.4;
 }
 
-#clients{
-display: flex;
-justify-content: center;
-align-items: center;
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of client items */
 }
 
-.client-item{
+.client-item {
     padding: 34px;
 }
 
-#clients img{
+#clients img {
     height: 124px;
     border-radius: 40px;
 }
 
-/*Contacts Section*/
-#contact{
+/* Contact Section */
+#contact {
     position: relative;
 }
 
-#contact::before{
+#contact::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -177,7 +172,7 @@ align-items: center;
     background: url('https://cdn.pixabay.com/photo/2019/05/10/14/23/contact-us-4193637__340.jpg') no-repeat center center/cover;
 }
 
-#contact-box{
+#contact-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +180,7 @@ align-items: center;
 }
 
 #contact-box input,
-#contact-box textarea{
+#contact-box textarea {
     width: 100%;
     padding: 0.5rem;
     border-radius: 9px;
@@ -194,35 +189,36 @@ align-items: center;
     border: 2px solid black;
 }
 
-#contact-box form{
+#contact-box form {
     width: 40%;
 }
 
-#contact-box label{
+#contact-box label {
     font-size: 1.3rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-footer{
+/* Footer */
+footer {
     background: rgb(73, 50, 50);
     color: white;
     padding: 9px 20px;
 }
 
-/*Utilities Classes*/
-.h-primary{
+/* Utility Classes */
+.h-primary {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 3.8rem;
     padding: 12px;
 }
 
-.h-secondary{
+.h-secondary {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.2rem;
     padding: 12px;
 }
 
-.btn{
+.btn {
     padding: 6px 20px;
     border: 2px solid rgb(255, 253, 253);
     background-color: green;
@@ -233,12 +229,11 @@ footer{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: chartreuse;
     color: black;
 }
 
-.center{
+.center {
     text-align: center;
 }
- 
