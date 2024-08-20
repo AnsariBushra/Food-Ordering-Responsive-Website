@@ -1,22 +1,44 @@
 /* Add styles specific to smaller screens */
 @media screen and (max-width: 1170px) {
     #navbar {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    #logo{
+        font-size: small;
+    }
+
+    #logo img{
+        height: 30px;
     }
 
     #navbar ul {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     #navbar ul li a {
         font-size: 1rem;
         padding: 0 7px;
+        display: flex;
+        flex-direction: row;
         padding-bottom: 8px;
     }
 
     #home {
         padding: 3px 28px;
         height: 370px;
+    }
+
+    #home::before {
+        content: "";
+        background: url('https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-in-a-row-picture-id1208790364?k=20&m=1208790364&s=612x612&w=0&h=EMmRWT5P5qbUvy95RxDtUSWrttlIsuXqjzRFhnTxqMQ=') no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 377px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.79;
     }
 
     #home p {
